@@ -1,16 +1,25 @@
 package stack
 
+import "time"
+
 type Stack struct {
-	maxsize int
-	top     int
-	array   [maxsize]string
+	stackArray [maxsize]struct{}
+	maxSize    int
+	top        int
+}
+
+func newStack(m int) Stack {
+	s := new(Stack)
+	s.maxSize = m
+	s.top = -1
+	return s
 }
 
 func Push(n string) {
-	maxsize += 1
-	array[maxsize] = n
+	top += 1
+	stackArray[top] = n
 }
 
-func Pop() {
-
+func Pop() struct{} {
+	return stackArray
 }
