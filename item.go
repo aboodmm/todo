@@ -1,4 +1,4 @@
-package item
+package todo
 
 type Item struct {
 	dateAdded Time

@@ -1,7 +1,6 @@
 package main
 
-import "github.com/aboodmm/todo/stack"
-import "github.com/aboodmm/todo/item"
+import "github.com/aboodmm/todo"
 
 func main() {
 	s := Stack.newStack(5)
