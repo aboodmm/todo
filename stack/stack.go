@@ -3,8 +3,8 @@ package stack
 import "time"
 
 type Stack struct {
-	stackArray [maxsize]struct{}
 	maxSize    int
+	stackArray []struct{}
 	top        int
 }
 
