@@ -3,6 +3,6 @@ package item
 import "time"
 
 type Item struct {
-	dateAdded Time
+	dateAdded time.Time
 	message   string
 }
