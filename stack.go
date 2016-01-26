@@ -1,11 +1,12 @@
-package stack
+package todo
 
 import "time"
 
 type Stack struct {
-	maxSize    int
-	stackArray []struct{}
-	top        int
+	maxSize     int
+	stackArray  []Item
+	top         int
+	dateCreated time.Time
 }
 
 func newStack(m int) *Stack {
@@ -15,9 +16,9 @@ func newStack(m int) *Stack {
 	return s
 }
 
-func Push(n string, s *Stack) {
+func Push(i *Item, s *Stack) {
 	s.top += 1
-	s.stackArray[s.top] = n
+	s.stackArray[s.top] = i
 }
 
 func Pop(s *Stack) []struct{} {
