@@ -1,26 +1,22 @@
 package todo
 
 import "time"
+import "fmt"
 
 type Stack struct {
-	MaxSize     int
-	StackArray  []*Item
-	Top         int
-	DateCreated time.Time
+	Size int
+	Top  *Item
 }
 
 func NewStack(m int) *Stack {
 	s := new(Stack)
-	s.MaxSize = m
-	s.Top = -1
 	return s
 }
 
-func Push(i *Item, s *Stack) {
-	s.Top += 1
-	s.StackArray[s.Top] = i
+func (s *Stack) Push(i *Item) {
+	s.Top = i
 }
 
-func Pop(s *Stack) []*Item {
+func (s *Stack) Pop() []*Item {
 	return s.StackArray
 }
