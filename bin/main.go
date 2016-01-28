@@ -5,5 +5,7 @@ import "github.com/aboodmm/todo"
 
 func main() {
 	s := todo.NewStack(5)
-	fmt.Printf("HELLO %d", s.MaxSize)
+	fmt.Printf("Made new stack with size %d", s.MaxSize)
+	testItem := item.NewItem("fuck yeah")
+	todo.Push(testItem, s)
 }
