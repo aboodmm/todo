@@ -7,7 +7,7 @@ type Item struct {
 	Message   string
 }
 
-func NewItem(m string) Item {
+func NewItem(m string) *Item {
 	i := new(Item)
 	i.DateAdded = time.Now()
 	i.Message = m

@@ -4,7 +4,7 @@ import "time"
 
 type Stack struct {
 	MaxSize     int
-	StackArray  []Item
+	StackArray  []*Item
 	Top         int
 	DateCreated time.Time
 }
@@ -16,11 +16,11 @@ func NewStack(m int) *Stack {
 	return s
 }
 
-func Push(i Item, s *Stack) {
+func Push(i *Item, s *Stack) {
 	s.Top += 1
 	s.StackArray[s.Top] = i
 }
 
-func Pop(s *Stack) []Item {
+func Pop(s *Stack) []*Item {
 	return s.StackArray
 }
