@@ -3,6 +3,18 @@ package todo
 import "time"
 import "fmt"
 
+type Item struct {
+	DateAdded time.Time
+	Message   string
+}
+
+func NewItem(m string) *Item {
+	i := new(Item)
+	i.DateAdded = time.Now()
+	i.Message = m
+	return i
+}
+
 type Stack struct {
 	Size int
 	Top  *Item
