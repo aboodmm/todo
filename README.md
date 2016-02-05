@@ -1,3 +1,3 @@
 # todo
 
-YAAAAAAAAAAAYyyyy
+ cli app using a lifo stack to store messages
